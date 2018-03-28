@@ -1,0 +1,29 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Liste de produit</h3>
+    </div>
+    <div class="panel-body">
+
+<table class="table table-bordered table-hover table-striped" *ngIf="data && data.length">
+  <thead>
+    <tr>
+        <th></th>
+      <th>Code</th>
+      <th>Nom</th>
+      <th>Prix unitaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of data;let i=index">
+        <td>{{i}}</td>
+      <td>{{prod.code}}</td>
+      <td>{{prod.nom}}</td>
+      <td>{{prod.prixUnitaire | currency:'DT ':true:'1.2-3'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
